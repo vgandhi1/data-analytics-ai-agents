@@ -3,11 +3,11 @@ from agents.Data_analyzer_agent import getDataAnalyzerAgent
 from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_agentchat.conditions import TextMentionTermination
 
-def getDataAnalyzerTeam(docker,model_client):
+def getDataAnalyzerTeam(docker, model_client, filename="data.csv"):
 
     code_executor_agent = getCodeExecutorAgent(docker)
 
-    data_analyzer_agent = getDataAnalyzerAgent(model_client)
+    data_analyzer_agent = getDataAnalyzerAgent(model_client, filename)
 
     text_mention_termination = TextMentionTermination('STOP')
 
@@ -18,5 +18,3 @@ def getDataAnalyzerTeam(docker,model_client):
     )
 
     return team
-
-

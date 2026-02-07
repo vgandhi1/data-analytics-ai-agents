@@ -7,3 +7,10 @@ openai
 tiktoken
 autogen-ext[docker]
 streamlit
+requests
+openpyxl
+pandas
+matplotlib
+seaborn
+fastapi
+uvicorn
